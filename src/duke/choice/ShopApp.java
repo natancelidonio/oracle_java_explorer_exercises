@@ -6,12 +6,12 @@ public class ShopApp {
 
 		double tax = 0.2;
 		
-		System.out.println("Welcome to Duke Choice Shop");
+		System.out.println("Welcome to Duke Choice Shop!");
 		
 		Customer c1 = new Customer();
 		c1.setName("Pinky");
 		c1.setSize("S");
-		System.out.println("\nHello, " + c1 +"!");
+		System.out.println("\nHello, " + c1 +".\n");
 		
 		
 		Clothing item1 = new Clothing();
@@ -25,18 +25,21 @@ public class ShopApp {
 		item2.setPrice(10.5);
 		item2.setSize("S");
 		
-		System.out.println();
-		System.out.println(item1);
-		System.out.println(item2);
-		
 		Clothing[] items = {item1, item2};
-		 
-		
-		//assume the customer has purchased two T-Shirts and one Jacket.
+
+		for(Clothing item : items) {
+			System.out.println(item.description + ", " + item.price + ", " + item.size + ";");
+		}
 		
 		double total = 0; 
-		total = (item2.price * 2 + item1.price) * (1 + tax);
-		System.out.println("\n$" + total);
+		
+		for(Clothing item : items) {
+			total += item.price * (1 + tax);			
+			
+		}
+		
+		System.out.println("\nTotal is $" + total);
+		
 		
 		int measurement = 3;
 		
