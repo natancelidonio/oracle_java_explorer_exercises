@@ -16,7 +16,9 @@ public class ShopApp {
 		
 		Clothing item1 = new Clothing();
 		Clothing item2 = new Clothing();
-		
+
+		Clothing[] items = {item1, item2, new Clothing(), new Clothing()};
+	
 		item1.setDescription("Blue Jacket");
 		item1.setPrice(20.9);
 		item1.setSize("M");
@@ -24,17 +26,32 @@ public class ShopApp {
 		item2.setDescription("Orange T-Shirt");
 		item2.setPrice(10.5);
 		item2.setSize("S");
-		
-		Clothing[] items = {item1, item2};
 
+		items[2].setDescription("Green Scarf");
+		items[2].setPrice(5);
+		items[2].setSize("S");
+		
+		items[3].setDescription("Blue T-Shirt");
+		items[3].setPrice(10.5);
+		items[3].setSize("S");
+		
+
+		System.out.println("Items in stock:\n");
 		for(Clothing item : items) {
 			System.out.println(item.description + ", " + item.price + ", " + item.size + ";");
 		}
 		
+		System.out.println("\nAre you buying:\n");
 		double total = 0; 
 		
 		for(Clothing item : items) {
-			total += item.price * (1 + tax);			
+			if (item.size == c1.size) {
+				System.out.println(item);
+				total += item.price * (1 + tax);
+				if (total > 15) {
+					break;
+				}
+			}
 			
 		}
 		
