@@ -29,6 +29,9 @@ public class ShopApp {
 		System.out.println(item1);
 		System.out.println(item2);
 		
+		Clothing[] items = {item1, item2};
+		 
+		
 		//assume the customer has purchased two T-Shirts and one Jacket.
 		
 		double total = 0; 
