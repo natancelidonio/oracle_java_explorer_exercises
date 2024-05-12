@@ -8,9 +8,11 @@ public class ShopApp {
 		System.out.println("Welcome to Duke Choice Shop!");
 		
 		Customer c1 = new Customer();
+		
 		c1.setName("Pinky");
-		c1.setSize("S");
-		System.out.println("\nHello, " + c1 +".\n");
+		c1.setSize(3);
+		
+		System.out.println("\nHello, " + c1.getName() +".\n");
 		
 		
 		Clothing item1 = new Clothing();
@@ -56,22 +58,6 @@ public class ShopApp {
 		
 		System.out.println("\nTotal is $" + total);
 		
-		
-		int measurement = 3;
-		
-		switch (measurement) {
-			case 1, 2, 3:
-				c1.setSize("S");
-				break;
-			case 4, 5, 6:
-				c1.setSize("M");
-				break;
-			case 7, 8, 9:
-				c1.setSize("M");
-				break;
-			default:
-				c1.setSize("X");
-		}
 	}
 
 }
