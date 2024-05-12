@@ -5,6 +5,8 @@ public class Customer {
 	private String name;
 	private String size;
 	
+	private Clothing[] items;
+	
 	public Customer() {
 	}
 
@@ -38,10 +40,25 @@ public class Customer {
 			break;
 		default:
 			setSize("XL");
-	}
+		}
 	}
 
+	public void addItems(Clothing[] someItems) {
+		items = someItems;
+	}
 
+	public Clothing[] getItems() {
+		return items;
+	}
+	
+	public double getTotalClothingCost() {
+		double total = 0;		
+		for(Clothing item : items) {
+			total += item.getPrice();
+		}
+		return total;
+	}
+	
 	@Override
 	public String toString() {
 		return name;
