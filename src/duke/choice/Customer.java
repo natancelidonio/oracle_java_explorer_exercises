@@ -15,8 +15,6 @@ public class Customer {
 		setSize(measurement);
 	}
 
-
-
 	public String getName() {
 		return name;
 	}
