@@ -7,11 +7,8 @@ public class ShopApp {
 		
 		System.out.println("Welcome to Duke Choice Shop!");
 		
-		Customer c1 = new Customer();
-		
-		c1.setName("Pinky");
-		c1.setSize(3);
-		
+		Customer c1 = new Customer("Pinky", 3);
+				
 		System.out.println("\nHello, " + c1.getName() +".\n");
 		
 		Clothing item1 = new Clothing();
