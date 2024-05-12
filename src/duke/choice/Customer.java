@@ -2,8 +2,8 @@ package duke.choice;
 
 public class Customer {
 
-	public String name;
-	public String size;
+	private String name;
+	private String size;
 	
 	public Customer() {
 	}

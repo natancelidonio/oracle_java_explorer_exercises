@@ -4,7 +4,6 @@ public class ShopApp {
 
 	public static void main(String[] args) {
 
-		double tax = 0.2;
 		
 		System.out.println("Welcome to Duke Choice Shop!");
 		
@@ -38,16 +37,16 @@ public class ShopApp {
 
 		System.out.println("Items in stock:\n");
 		for(Clothing item : items) {
-			System.out.println(item.description + ", " + item.price + ", " + item.size + ";");
+			System.out.println(item.getDescription() + ", " + item.getPrice() + ", " + item.getSize() + ";");
 		}
 		
 		System.out.println("\nAre you buying:\n");
-		double total = 0; 
-		
+
+		double total = 0;		
 		for(Clothing item : items) {
-			if (item.size == c1.size) {
+			if (item.getSize() == c1.getSize()) {
 				System.out.println(item);
-				total += item.price * (1 + tax);
+				total += item.getPrice();
 				if (total > 15) {
 					break;
 				}
@@ -62,16 +61,16 @@ public class ShopApp {
 		
 		switch (measurement) {
 			case 1, 2, 3:
-				c1.size = "S";
+				c1.setSize("S");
 				break;
 			case 4, 5, 6:
-				c1.size = "M";
+				c1.setSize("M");
 				break;
 			case 7, 8, 9:
-				c1.size = "L";
+				c1.setSize("M");
 				break;
 			default:
-				c1.size = "X";
+				c1.setSize("X");
 		}
 	}
 

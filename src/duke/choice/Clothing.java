@@ -2,9 +2,12 @@ package duke.choice;
 
 public class Clothing {
 
-	public String description;
-	public double price;
-	public String size;
+	private String description;
+	private double price;
+	private String size;
+	
+	private final double MIN_PRICE = 10.0;
+	private final double TAX = 0.2;
 	
 	public Clothing() {
 	}
@@ -18,11 +21,11 @@ public class Clothing {
 	}
 
 	public double getPrice() {
-		return price;
+		return price * (1 + TAX);
 	}
 
 	public void setPrice(double price) {
-		this.price = price;
+		this.price = (price > MIN_PRICE) ? price : MIN_PRICE;
 	}
 
 	public String getSize() {
