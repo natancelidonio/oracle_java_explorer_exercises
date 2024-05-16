@@ -22,7 +22,8 @@ public class ShopApp {
 
 		System.out.println("Items in stock:\n");
 		for(Clothing item : items) {
-			System.out.println(item.getDescription() + ", " + item.getPrice() + ", " + item.getSize() + ";");
+			//System.out.println(item.getDescription() + ", " + item.getPrice() + ", " + item.getSize() + ";");
+			System.out.println(item.toString());
 		}
 		
 		
